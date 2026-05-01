@@ -42,7 +42,7 @@ export const Cabecalho = () => {
                     GUARDA CIVIL <br /> MUNICIPAL DO RECIFE
                 </div>
             </div>
-            <div class="menu-icon">☰</div>
+            <div className="menu-icon">☰</div>
         </HeaderEstilizado>
     )
 }
