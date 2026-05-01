@@ -127,11 +127,11 @@ export const Cabecalho = () => {
                                 Início
                             </MenuLink>
                         </MenuItem>
-                        <MenuItem>
+                        {/* <MenuItem>
                             <MenuLink to="/pesquisa" onClick={() => setMenuOpen(false)}>
                                 Consulta
                             </MenuLink>
-                        </MenuItem>
+                        </MenuItem> */}
                         <MenuItem>
                             <MenuLink to="/inspetoria/relatorios" onClick={() => setMenuOpen(false)}>
                                 Carta programa
