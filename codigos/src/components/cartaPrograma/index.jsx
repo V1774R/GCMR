@@ -11,6 +11,11 @@ const Container = styled.div`
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 
+  @media (max-width: 768px) {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
   &:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
@@ -22,16 +27,32 @@ const Header = styled.div`
   align-items: center;
   margin-bottom: 12px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   p {
     font-weight: bold;
     color: #333;
     margin: 0;
+    font-size: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
   }
 `
 
 const Info = styled.p`
   margin: 4px 0;
   color: #555;
+  font-size: 14px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
 `
 
 const Toggle = styled.p`
@@ -39,11 +60,17 @@ const Toggle = styled.p`
   font-weight: bold;
   color: #464646;
   cursor: pointer;
-  text-align: right;
   padding-right: 8px;
+  font-size: 14px;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    text-align: left;
+    padding-right: 0;
+    font-size: 13px;
   }
 `
 
@@ -56,8 +83,18 @@ const LocalItem = styled.div`
   font-size: 14px;
   color: #444;
 
+  @media (max-width: 768px) {
+    padding: 6px;
+    margin: 4px 0;
+    font-size: 13px;
+  }
+
   p {
     margin: 2px 0;
+
+    @media (max-width: 768px) {
+      margin: 1px 0;
+    }
   }
 `
 

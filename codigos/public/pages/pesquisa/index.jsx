@@ -7,6 +7,30 @@ const Container = styled.div`
     align-items: center;
     padding: 20px;
     gap: 16px;
+
+    @media (max-width: 768px) {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+        max-width: 600px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
 `
 
 export const Pesquisa = () => {

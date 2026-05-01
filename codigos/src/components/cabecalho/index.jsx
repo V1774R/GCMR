@@ -13,6 +13,10 @@ const HeaderEstilizado = styled.header`
     position: relative;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
+    @media (max-width: 768px) {
+        padding: 12px;
+    }
+
     .logo {
         display: flex;
         align-items: center;
@@ -21,29 +25,39 @@ const HeaderEstilizado = styled.header`
 
     .logo img {
         width: 42px;
+
+        @media (max-width: 768px) {
+            width: 32px;
+        }
     }
 
     .logo-text {
         font-weight: 700;
         font-size: 14px;
         line-height: 1.2;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     .menu-icon {
         font-size: 22px;
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 `
 
 const MenuList = styled.ul`
     position: absolute;
-    width: 100%;
-    height: calc(100vh - 132px);
     top: 100%;
-    right: 0px;
+    right: 16px;
     background: var(--azul-escuro);
     border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 0px;
+    border-radius: 12px;
     padding: 12px;
     list-style: none;
     margin: 0;
@@ -52,6 +66,18 @@ const MenuList = styled.ul`
     gap: 10px;
     min-width: 180px;
     z-index: 10;
+
+    @media (max-width: 768px) {
+        top: 100%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        border-radius: 0;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const MenuItem = styled.li`
@@ -63,6 +89,7 @@ const MenuLink = styled(NavLink)`
     text-decoration: none;
     font-weight: 600;
     transition: opacity .2s ease;
+    font-size: 16px;
 
     &.active {
         opacity: 0.7;
@@ -70,6 +97,11 @@ const MenuLink = styled(NavLink)`
 
     &:hover {
         opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        padding: 10px 0;
     }
 `
 

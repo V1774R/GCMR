@@ -6,6 +6,10 @@ const ContainerPesquisaEstilizado = styled.div`
     padding: 16px;
     background: white;
 
+    @media (max-width: 768px) {
+        padding: 12px;
+    }
+
     input {
         width: 100%;
         padding: 12px 40px 12px 16px; /* espaço extra à direita */
@@ -14,6 +18,10 @@ const ContainerPesquisaEstilizado = styled.div`
         font-size: 14px;
         outline: none;
         transition: 0.3s;
+
+        @media (max-width: 768px) {
+            font-size: 16px; /* melhor para mobile */
+        }
     }
 
     input:focus {
@@ -29,44 +37,69 @@ const ContainerPesquisaEstilizado = styled.div`
         font-size: 18px;
         color: var(--azul-medio);
         pointer-events: none; /* não atrapalha o clique no input */
+
+        @media (max-width: 768px) {
+            right: 20px;
+        }
     }
 `
 
 const BannerEstilizado = styled.div`
-        background-color: var(--azul-escuro);
-        color: var(--azul-claro);
-        padding: 40px 20px;
-        text-align: center;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    padding: 40px 20px;
+    text-align: center;
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            margin-bottom: 8px;
+    @media (max-width: 768px) {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        margin-bottom: 8px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
         }
+    }
 
-        p {
-            font-size: 14px;
-            opacity: 0.9;
-        }    
+    p {
+        font-size: 14px;
+        opacity: 0.9;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
+    }
 `
 
 const SecaoEstilizada = styled.section`
-     
-    
     padding: 20px 16px;
-    
+
+    @media (max-width: 768px) {
+        padding: 15px 12px;
+    }
 
     h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         margin-bottom: 16px;
         color: var(--azul-escuro);
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
     }
 
     .cards {
         display: grid;
         grid-template-columns: 1fr;
         gap: 16px;
+
+        @media (min-width: 769px) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
     }
 
     .card {
@@ -76,6 +109,10 @@ const SecaoEstilizada = styled.section`
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         transition: 0.3s;
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
     }
 
     .card:hover {
@@ -87,17 +124,29 @@ const SecaoEstilizada = styled.section`
         font-size: 28px;
         margin-bottom: 12px;
         color: var(--azul-medio);
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     .card h3 {
         font-family: 'Montserrat', sans-serif;
         font-size: 15px;
         margin-bottom: 6px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 
     .card p {
         font-size: 13px;
         opacity: 0.8;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 `
 

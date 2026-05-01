@@ -10,13 +10,35 @@ const Container = styled.div`
     flex-direction: column;
     gap: 8px;
 
-    input{
-        padding: 8px 12px;
-        border: 1px solid #ccc; 
-        border-radius: 8px;
-
+    @media (max-width: 768px) {
+        padding: 12px;
+        gap: 12px;
     }
-    button{
+
+    h1 {
+        font-size: 24px;
+        margin-top: 24px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    input {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+            padding: 10px 12px;
+        }
+    }
+    .aviso{
+        font-size: 14px;
+        color: #832122;
+        font-style: italic;
+    }
+    button {
         background: #09345f;
         color: #fff;
         border: none;
@@ -24,6 +46,19 @@ const Container = styled.div`
         padding: 10px 14px;
         cursor: pointer;
         font-weight: bold;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+            padding: 12px 16px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
     }
 `
 
@@ -46,6 +81,12 @@ const Modal = styled.div`
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
     overflow: auto;
     padding: 24px;
+
+    @media (max-width: 768px) {
+        padding: 16px;
+        max-height: calc(100vh - 16px);
+        border-radius: 8px;
+    }
 `
 
 const CloseButton = styled.button`
@@ -57,9 +98,15 @@ const CloseButton = styled.button`
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 16px;
+    font-size: 16px;
 
     &:hover {
         opacity: 0.92;
+    }
+
+    @media (max-width: 768px) {
+        padding: 12px 16px;
+        font-size: 14px;
     }
 `
 
@@ -129,8 +176,14 @@ export const Relatorios = () => {
 
     return (
         <Container>
+            
+            <p className="aviso"><strong>Aviso:</strong> Esta funcionalidade é uma solução provisória e pode apresentar inconsistências, já que depende de planilhas online que podem ser alteradas sem aviso prévio.
+            <br /> Em caso de divergências, entre em contato com o(a) agente responsável pelo serviço administrativo do seu setor.</p>
+            <p>A equipe de tecnologia já está trabalhando no desenvolvimento de uma solução definitiva, mais estável e confiável.</p>
+
             <h1>Carta Programa Online</h1>
-            <input type="text" placeholder="Insira a placa da viatura" onChange={(e) => { setPlaca(e.target.value) }} />
+            <input type="text" placeholder="Insira uma placa para consultar" onChange={(e) => { setPlaca(e.target.value) }} />
+            
             <button onClick={() => { buscarCartaPrograma(placa) }}>Consultar</button>
             <hr />
             {
