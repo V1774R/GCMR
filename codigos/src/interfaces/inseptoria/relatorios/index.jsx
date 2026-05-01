@@ -60,6 +60,12 @@ const Container = styled.div`
             font-size: 13px;
         }
     }
+
+    a{
+        text-decoration: underline;
+        color: #000;
+        margin-right: 16px;
+    }
 `
 
 const Overlay = styled.div`
@@ -180,11 +186,16 @@ export const Relatorios = () => {
             <p className="aviso"><strong>Aviso:</strong> Esta funcionalidade é uma solução provisória e pode apresentar inconsistências, já que depende de planilhas online que podem ser alteradas sem aviso prévio.
             <br /> Em caso de divergências, entre em contato com o(a) agente responsável pelo serviço administrativo do seu setor.</p>
             <p>A equipe de tecnologia já está trabalhando no desenvolvimento de uma solução definitiva, mais estável e confiável.</p>
+            <hr />
 
             <h1>Carta Programa Online</h1>
-            <input type="text" placeholder="Insira uma placa para consultar" onChange={(e) => { setPlaca(e.target.value) }} />
-            
+            <input type="text" placeholder="Insira uma placa para consultar..." onChange={(e) => { setPlaca(e.target.value) }} />
             <button onClick={() => { buscarCartaPrograma(placa) }}>Consultar</button>
+            <hr />
+                <p>Links úteis:</p>
+                <a href="https://forms.gle/7jy48C3HFwAuxDnG8" target="_blank">Registrar PBF</a>
+                <a href="https://forms.gle/LZsycLpED37CbBQu7" target="_blank">Registrar ocorrência diária</a>
+
             <hr />
             {
                 cartaProgramaFiltrada.map(grupo => (
